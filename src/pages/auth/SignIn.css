@@ -3,7 +3,7 @@ input::placeholder {
 }
 
 .right-column {
-  background: url("../../assets/images/users/full_login_bg.png") no-repeat center center;
+  background: url("../../assets/images//users/full_login_bg.jpeg") no-repeat center center;
   background-size: cover;
 }
 
@@ -12,6 +12,24 @@ input::placeholder {
   align-items: center;
   display: flex !important;
   flex-direction: column;
+}
+
+.password-validations {
+  font-size: 10px;
+  color: #535364;
+  padding: 0px;
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.password-validations li {
+  margin-bottom: 4px;
+}
+
+.termsandconditions {
+  font-size: 12px !important;
+  font-weight: 400 !important;
 }
 
 .right-column h3 {
@@ -46,6 +64,7 @@ input::placeholder {
     font-size: 14px;
     color: #535364;
     border-bottom: 1px solid #EDEDED !important;
+    width: max-content !important;
 }
 
 .signin-form label, .signup-form label {
@@ -62,19 +81,35 @@ input::placeholder {
     font-family: 'Inter';
     padding: 12px 10px;
     margin-top: 6px;
+    background-color: #FBFBFB;
+    
 }
 
 .signin-btn {
     background-color: #000B82;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 12px 10px;
+}
+
+.signin-btn:hover {
+  background-color: #000B82;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 12px 10px;
 }
 
 .create-account-btn {
     background-color: #000B82;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 10px;
+    padding: 12px 10px; 
+}
+
+.create-account-btn:hover {
+    background-color: #000B82;
+    font-weight: 700;
+    border-radius: 10px;
     padding: 12px 10px; 
 }
 
@@ -83,6 +118,7 @@ input::placeholder {
     font-size: 14px;
     font-family: 'Inter';
     text-decoration: none;
+    font-weight: 600;
 }
 
 .social-login-btn button {
@@ -167,34 +203,51 @@ input::placeholder {
   background: linear-gradient(to right, #0DA2FF, #00DB62);
 }
 
-.user-signup-checkbox {
-  padding: 8px !important;
-  margin-top: 0px !important;
-}
-
-.password-validations {
-  font-size: 12px;
-  color: #535364;
-  padding: 0px;
-  list-style: none;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.password-validations li {
-  margin-bottom: 4px;
-}
-
 .sign-tabs-head {
   font-size: 14px;
   border: none;
   border-radius: 0px;
+  color: #898989;
 }
 
-.termsandconditions {
-  font-size: 12px !important;
-  font-weight: 400 !important;
+.back-arrow {
+  color: #535364;
 }
+
+.checkbox-input {
+  width: 10px;
+  height: 10px;
+  padding: 6px !important;
+  border-radius: 30px !important;
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+}
+
+.checkbox-outer-box {
+  border: 1px solid #CDCDD3;
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.form-check-input:checked {
+  background-color: #0DA2FF !important;
+  border-color: #0DA2FF;
+}
+
+ .text-primary {
+  color: #535364 !important;
+  font-weight: 500 !important;
+  border-bottom: 2px solid #0DA2FF !important;
+}
+
+.desktop-arrow {
+    display: block;
+  }
+  
+  .mobile-arrow {
+    display: none;
+  }
 
 @media(max-width: 567px) {
   .image-column {
@@ -208,4 +261,27 @@ input::placeholder {
   .tabchange-text {
     width: 60% !important;
   }
+  
+  /* .desktop-arrow {
+    display: none !important;
+  } */
+   
+  .sign-up-form {
+    margin-top: 10% !important;
+  }
+  
+  .mobile-arrow {
+    display: Block;
+  }
+  
+  .signup-title {
+    font-size: 20px !important;
+  }
+
+}
+
+.terms-of-use {
+  text-decoration: none;
+  border-bottom: none !important;
+  color: #007bff !important;
 }

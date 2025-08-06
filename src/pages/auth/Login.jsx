@@ -4,16 +4,19 @@ import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import "./SignIn.css";
 import { BASE_URL } from "../../../env";
 import { useNavigate } from "react-router-dom";
-import { BsArrowLeft } from "react-icons/bs";
+import { useSearchParams } from "react-router-dom";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const SignIn = () => {
-  const [tab, setTab] = useState("signin");
   const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
   const [signupRole, setSignupRole] = useState("");
+  const [searchParams] = useSearchParams();
+  const defaultTab = searchParams.get("tab");
+  const [tab, setTab] = useState(defaultTab === "signup" ? "signup" : "signin");
 
   const navigate = useNavigate();
 
@@ -37,11 +40,7 @@ const SignIn = () => {
         localStorage.setItem("userRole", role); // Now store role locally
 
         // Navigate based on role
-        if (role === "franchisor") {
-          navigate("/");
-        } else {
-          navigate("/");
-        }
+        navigate("/");
       }
     } catch (error) {
       alert("Login failed: " + (error.response?.data?.msg || "Server error"));
@@ -50,7 +49,7 @@ const SignIn = () => {
 
   const handleSignup = async () => {
     try {
-      const res = await axios.post(`${BASE_URL}api/auth/register`, {
+      const res = await axios.post(`${BASE_URL}/api/auth/register`, {
         email: signupEmail,
         password: signupPassword,
         role: signupRole, // sent to backend, stored in DB
@@ -66,12 +65,8 @@ const SignIn = () => {
         const userRole = res.data.user?.role || signupRole;
         localStorage.setItem("userRole", userRole);
 
-        // Redirect based on role (optional)
-        if (userRole === "franchisor") {
-          window.location.href = "/";
-        } else {
-          window.location.href = "/";
-        }
+        // Navigate based on role
+        navigate("/");
       }
     } catch (error) {
       console.error("Signup failed", error);
@@ -83,17 +78,29 @@ const SignIn = () => {
     <div className="sign-container vh-100">
       <div className="row h-100">
         {/* Left Column - SignIn Form */}
-        <div className="col-lg-3 d-flex align-items-center justify-content-center bg-white p-4 signin-column">
-          <div className="w-100" style={{ maxWidth: "400px" }}>
-            <p onClick={() => navigate(-1)} className="py-4">
+        <div className="col-lg-3 d-flex align-items-start justify-content-center bg-white p-4 signin-column">
+          <div
+            className="w-100 sign-up-form"
+            style={{ maxWidth: "400px", marginTop: "40%" }}
+          >
+            {/* <p
+              onClick={() => navigate(-1)}
+              className="py-4 back-arrow desktop-arrow"
+            >
               <BsArrowLeft size={20} />
-            </p>
-            <h3 className="signup-title  mb-4">
+            </p> */}
+            <h3 className="signup-title  mb-4 d-flex gap-10 justify-content-between">
+              <p
+                onClick={() => navigate(-1)}
+                className="py-0 back-arrow desktop-arrow"
+              >
+                <BsArrowLeft size={20} />
+              </p>
               Welcome to Franchise Listings
             </h3>
 
             {/* Tabs */}
-            <div className="d-flex mb-4 tabchange-text w-50">
+            <div className="d-flex mb-4 tabchange-text ">
               <button
                 onClick={() => setTab("signin")}
                 className={`flex-fill btn border-bottom sign-tabs-head ${
@@ -149,15 +156,15 @@ const SignIn = () => {
               </div>
             ) : (
               <div className="signup-form">
-                <label>Select Role</label>
+                {/* <label>Select Role</label> */}
                 <select
                   value={signupRole}
                   onChange={(e) => setSignupRole(e.target.value)}
                   className="form-select mb-3"
                 >
-                  <option value="">I am:</option>
-                  <option value="franchisor">Franchisor</option>
-                  <option value="franchisee">Franchisee</option>
+                  <option value="">I am</option>
+                  <option value="franchisor">I AM A FRANCHISOR</option>
+                  <option value="franchisee">LOOKING TO BY A FRANCHISE</option>
                 </select>
                 <label>Email</label>
                 <input
@@ -178,10 +185,10 @@ const SignIn = () => {
                 <div className="small text-muted mb-3">
                   <ul className="password-validations">
                     <li>At least 8 characters</li>
-                    <li>validation neutral Mix of letters and numbers</li>
-                    <li>validation neutral At least 1 special character</li>
+                    <li>Validation neutral Mix of letters and numbers</li>
+                    <li>Validation neutral At least 1 special character</li>
                     <li>
-                      validation neutral At least 1 lowercase letter and 1
+                      Validation neutral At least 1 lowercase letter and 1
                       uppercase letter
                     </li>
                   </ul>
@@ -190,20 +197,19 @@ const SignIn = () => {
                   className="btn btn-primary w-100 mb-3 create-account-btn"
                   onClick={handleSignup}
                 >
-                  Create Account
+                  Sign in
                 </button>
                 <div className="form-check small d-flex align-items-center">
-                  <input
-                    className="form-check-input user-signup-checkbox"
-                    type="checkbox"
-                  />
+                  <span className="checkbox-outer-box">
+                    <input
+                      className="form-check-input checkbox-input"
+                      type="checkbox"
+                    />
+                  </span>
                   <label className="form-check-label ms-2 termsandconditions">
                     By Submitting, I accept Franchise Listings{" "}
-                    <a
-                      href="#"
-                      className="text-primary text-decoration-underline"
-                    >
-                      terms of use
+                    <a href="#" className="text-primary terms-of-use">
+                      terms of use.
                     </a>
                   </label>
                 </div>
@@ -242,13 +248,13 @@ const SignIn = () => {
 
         {/* Right Column - Image */}
         <div className="col-lg-9 d-none d-lg-block p-0 right-column image-column">
-          <h3>Join the World's Leading</h3>
+          <h3>Browse the World's Leading</h3>
           <h2>Franchise Marketplace</h2>
-          <p>
+          {/* <p>
             Browse thousand of franchise opportunities, resales, and connect{" "}
             <br></br>
             with franchise professionals around the world.
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

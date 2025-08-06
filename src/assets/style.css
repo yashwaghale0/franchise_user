@@ -1,26 +1,28 @@
 * {
   -webkit-tap-highlight-color: transparent;
+  font-family: 'Inter' !important;
 }
 
 .dashboard-icons-avtar {
   font-size: 24px;
-    padding: 10px;
+    padding: 0px;
     border-radius: 50%;
     border: 1px solid #ddd;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     align-items: center;
     color: #6D758F;
 }
 
 .css-pvj91o-MuiTypography-root {
-  font-size: 12px;
-  color: #6D758F;
+  font-size: 14px;
+  color: #535364;
+  font-weight: 600;
 }
 
 .css-197kj58-MuiTypography-root {
-  font-size: 40px;
+  font-size: 32px;
   color: #535364;
 }
 
@@ -56,7 +58,7 @@
   margin-right: 30px;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .stickyheader-icons {
@@ -71,11 +73,14 @@
 .Mainlogo_text {
   font-size: 18px; 
   margin: 0px; 
+  font-family: 'poppins' !important;
+  font-weight: 600;
 }
 
 .user-role {
-  font-size: 14px;
+  font-size: 10px;
   margin: 0px;
+  font-family: 'certia' !important;
 }
 
 .upgrade-link {
@@ -141,10 +146,12 @@
   color: #2A2A33;
   font-weight: 600;
   font-size: 16px;
+  font-family: 'Poppins' !important;
 }
 
 .user-name span {
   font-weight: 400 !important;
+  font-family: 'Poppins' !important;
 }
 
 .User-date {
@@ -175,8 +182,414 @@
 }
 
 .css-qmwq9b-MuiChip-label {
-  width: 80px;
+  width: 45px;
   text-align: center;
+  font-size: 12px !important;
 }
 
+.franchisestepsform-mainheading {
+  font-size: 26px;
+  background: linear-gradient(to right, #00DB62, #0DA2FF); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.css-dcfwkv-MuiChip-root.MuiChip-combinedPrimary, .css-18b53yu-MuiChip-root.MuiChip-combinedWarning {
+  border: none;
+  background-color: #fff;
+}
+
+.css-z9hlhg-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
+}
+
+.css-dcfwkv-MuiChip-root.MuiChip-combinedPrimary {
+  justify-content: flex-start;
+  color: #00DB9D;
+  font-family: "Inter";
+  font-size: 12px;
+}
+
+.css-18b53yu-MuiChip-root.MuiChip-combinedWarning {
+  color: red !important;
+}
+
+.nextstep-buttons {
+  border-radius: 30px !important;
+  padding: 4px 20px;
+  color: #535364;
+  font-size: 14px;
+}
+
+.upload-save-button button {
+  border: 1px solid #9BA4C3;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.css-uxn6cr {
+  border: 2px dashed #BAE5FF;
+}
+
+.upload-icon {
+  color: #BAE5FF;
+}
+
+.text-blue {
+  color: #6BBDEF;
+}
+
+.upload-file-btn {
+  border:1px solid  #6BBDEF;
+}
+
+.css-uxn6cr {
+  height: 394px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.franchisestepsform-maincontent {
+  font-size: 18px;
+}
+
+.formsstep_buttons {
+  gap: 10px;
+  display: flex;
+  
+}
+
+.formsstep_buttons button{
+  background-color: #6D758F;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid #6D758F
+}
+
+.steps-heading {
+  font-size: 28px !important;
+  font-weight: 600;
+  font-family: "Poppins" !important;
+  color: #535364;
+}
+
+.text-grey {
+  color: #6D758F;
+}
+
+.Stepsubmain-heading{
+  font-size: 14px;
+  color: #535364;
+  font-weight: 400;
+}
+
+.css-1unz3xj {
+  background: linear-gradient(to right, #00DB62 , #0DA2FF) ;
+}
+
+.outline-btn {
+  border-radius: 30px;
+}
+
+.brandLogo-icon {
+  padding: 40px;
+  border: 1px solid #0DA2FF;
+  border-style: dashed;
+  border-radius: 50%;
+}
+
+.input {
+  border-radius: 10px !important;
+}
+
+.stepform-section {
+  border-radius: 10px;
+}
+
+.brandBanner-icon {
+  padding: 40px;
+}
+
+
+.css-1v1y0ct-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer {
+  padding: 10px;
+}
+
+.steps-previous-btn {
+  background-color: #fff;
+  border: 1px solid #E1E4ED;
+  color: #6D758F;
+  border-radius: 30px;
+}
+
+
+
+.button {
+  background: linear-gradient(to right, #00DB62, #0DA2FF);
+  padding: 7px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.step-next-button {
+  background: linear-gradient(to right, #00DB62, #0DA2FF);
+  padding: 7px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.horizontal-line {
+  margin: 30px 0px;
+  color: #CDCDD3;
+}
+
+.css-5vq2th {
+  padding-left: 8px !important;
+}
+
+.dashboard-cards {
+  border-radius: 15px !important;
+}
+
+.css-puupk7-MuiCardContent-root, .css-puupk7-MuiCardContent-root:last-child {
+  padding: 0px !important;
+}
+
+/* ============= Home Dashboard Css =========== */
+
+.homeSection-dashboard {
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+
+  background: linear-gradient(to right,
+                              #fff 0%,
+                              #fff 40%,
+                              rgba(189, 252, 217, 0.8) 50%,
+                              #72C9FF 100%);
+  
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image:
+    linear-gradient(to right, 
+                    #fff 0%, 
+                    #fff 40%, 
+                    rgba(189, 252, 217, 0.8) 50%, 
+                    #72CEF7 100%),
+    linear-gradient(to right, #72CEF7, #BDFCD9);
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+/* ====================== steps Form Css ==================== */
+
+.steps-short-desc {
+  color: #535364;
+  font-weight: 400;
+}
+
+.stepform-container {
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 4px;
+}
+
+
+
+.Gallry-Images-section {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #6BBDEF;
+  border-style: dashed;
+  border-radius: 10px;  
+}
+
+.upload-brochure {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #6BBDEF;
+  border-style: dashed;
+  border-radius: 10px;
+}
+
+.Listing-form {
+  border-radius: 10px;
+}
+
+.listing-form-label {
+  font-size: 12px;
+  color: #535364;
+  font-family: 'Inter';
+  margin-bottom: 5px;
+}
+
+.upload-blue {
+  color: #6BBDEF;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.upload-description {
+  color: #6D758F;
+  font-weight: 400;
+}
+
+.upload-button {
+  display: none;
+}
+
+.upload-caption {
+  padding: 4px 15px;
+  border: 1px solid #6BBDEF;
+  font-size: 12px;
+  border-radius: 8px;
+  color: #6BBDEF;
+}
+
+.upload-title {
+  color: #6D758F;
+}
+
+.table-main-heading {
+  font-size: 20px;
+  font-family: "Inter";
+  color: #535364;
+  font-weight: 700;
+}
+
+.table-main-heading span {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.export-file-btn {
+  border: 1px solid #0DA2FF;
+  color: #0DA2FF;
+  font-size: 14px;
+  font-family: "Inter";
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 24px;
+}
+
+.new-listing-btn {
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Inter";
+  background: linear-gradient(to right, #00DB62, #0DA2FF);
+  border-radius: 10px;
+  padding: 10px 24px;
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+Select {
+  border-radius: 10px !important;
+}
+
+.Listingtable-head {
+  border-radius: 10px !important;
+}
+
+.mobile-content span {
+  display: none;
+}
+
+.mobile-content {
+  justify-content: space-between !important;
+  gap: 20px !important;
+}
+
+.MuiBox-root .css-15o9cg1 .Franchise-naming {
+  display: none !important;
+}
+
+.MuiBox-root .css-15o9cg1 {
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  flex-flow: column-reverse !important;
+  gap: 15px !important;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #E1E9EE;
+}
+
+.css-1rrx047 {
+  border-right: 1px solid #E1E9EE;
+}
+
+.MuiBox-root .css-15o9cg1 .sidebar-close-logo {
+  margin-left: 10px;
+}
+
+.css-1soxpfl-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer, .css-79xojp-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer {
+  padding: 10px 0px !important;
+}
+
+.css-lqwr9g-MuiPickersOutlinedInput-notchedOutline, .css-4h8zbi-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root, .css-1bulnml-MuiInputBase-root-MuiOutlinedInput-root, .css-f5wl4m {
+  border-radius: 10px !important;
+}
+
+.css-eqc3kq-MuiFormControl-root-MuiPickersTextField-root {
+  width: 100%;
+  color: #6D758F;
+}
+
+.simplebar-content {
+  display: flex;
+  /* justify-content: space-between; */
+  height: 90vh !important;
+}
+
+.css-1uhjpfk-MuiButtonBase-root-MuiIconButton-root:hover, .css-11fhhhm-MuiButtonBase-root-MuiIconButton-root:hover {
+  background: none !important;
+}
+
+.css-raqd1g:last-child, .css-raqd1g {
+  padding: 0px !important;
+}
+
+.css-5uxytq.MuiChip-combinedPrimary {
+  justify-content: flex-start;
+  background-color: #fff;
+  border: none;
+  color: #00DB9D;
+}
 
