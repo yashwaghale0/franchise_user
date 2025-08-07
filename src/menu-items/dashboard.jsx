@@ -17,6 +17,19 @@ import { BiCategory } from "react-icons/bi";
 import { LuStar } from "react-icons/lu";
 import { SlCalender } from "react-icons/sl";
 import { RiNewsLine } from "react-icons/ri";
+import franchiseList from "../assets/images/users/franchise-list.svg";
+import Home from "../assets/images/users/home.svg";
+import salesLead from "../assets/images/users/sales-lead.svg";
+
+const franchiseListIcon = () => (
+  <img src={franchiseList} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+const HomeIcon = () => (
+  <img src={Home} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+const salesLeadIcon = () => (
+  <img src={salesLead} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
 
 // icons
 const icons = {
@@ -36,6 +49,9 @@ const icons = {
   LuStar,
   SlCalender,
   RiNewsLine,
+  franchiseList: franchiseListIcon,
+  Home: HomeIcon,
+  salesLead: salesLeadIcon,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -50,7 +66,7 @@ const dashboard = {
       title: "Dashboard",
       type: "item",
       url: "/",
-      icon: icons.HomeOutlined,
+      icon: icons.Home,
       breadcrumbs: false,
     },
     {

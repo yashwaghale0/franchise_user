@@ -15,10 +15,11 @@ export default function Footer() {
       }}
     >
       <Typography variant="caption">
-        &copy; 2025
+        &copy; 2025{" "}
         <Link href="#" target="_blank" underline="hover">
           FranchiseListings.com
-        </Link>
+        </Link>{" "}
+        <br />
         All rights reserved{" "}
       </Typography>
       {/* <Stack

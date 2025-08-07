@@ -10,6 +10,21 @@ import Typography from "@mui/material/Typography";
 import AnalyticEcommerce from "components/cards/statistics/AnalyticEcommerce";
 import UniqueVisitorCard from "sections/dashboard/default/UniqueVisitorCard";
 import UserListing from "../../sections/dashboard/usercomponent/ListingTable";
+import activeLeads from "../../assets/images/users/activeleads.svg";
+import checks from "../../assets/images/users/Checks.svg";
+
+const activeLeadsIcon = () => (
+  <img src={activeLeads} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+
+const checksIcon = () => (
+  <img src={checks} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+
+const icons = {
+  activeLeads: activeLeadsIcon,
+  checks: checksIcon,
+};
 
 // avatar style
 const avatarSX = {
@@ -50,7 +65,7 @@ export default function DashboardUser() {
           count="124"
           percentage={12}
           extra="35,000"
-          icon={<LiaSitemapSolid />}
+          icon={icons.activeLeads()}
         />
       </Grid>
       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
@@ -61,7 +76,7 @@ export default function DashboardUser() {
           isLoss
           color="warning"
           extra="8,900"
-          icon={<GrMapLocation />}
+          icon={icons.checks()}
         />
       </Grid>
       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>

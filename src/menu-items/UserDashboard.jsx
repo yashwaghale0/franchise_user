@@ -5,6 +5,28 @@ import {
   FileTextOutlined,
   FilterOutlined,
 } from "@ant-design/icons";
+import franchiseList from "../assets/images/users/franchise-list.svg";
+import Home from "../assets/images/users/home.svg";
+import salesLead from "../assets/images/users/sales-lead.svg";
+import searchDirectory from "../assets/images/users/search-directory.svg";
+
+const franchiseListIcon = () => (
+  <img src={franchiseList} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+const HomeIcon = () => (
+  <img src={Home} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+const salesLeadIcon = () => (
+  <img src={salesLead} alt="Dashboard" style={{ width: 20, height: 20 }} />
+);
+
+const searchDirectoryIcon = () => (
+  <img
+    src={searchDirectory}
+    alt="Dashboard"
+    style={{ width: 20, height: 20 }}
+  />
+);
 
 // icons
 const icons = {
@@ -12,6 +34,10 @@ const icons = {
   HomeOutlined,
   FileTextOutlined,
   FilterOutlined,
+  franchiseList: franchiseListIcon,
+  Home: HomeIcon,
+  salesLead: salesLeadIcon,
+  searchDirectory: searchDirectoryIcon,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -26,7 +52,7 @@ const userdashboard = {
       title: "Home",
       type: "item",
       url: "/",
-      icon: icons.HomeOutlined,
+      icon: icons.Home,
       breadcrumbs: false,
     },
     {
@@ -34,7 +60,7 @@ const userdashboard = {
       title: "Search Directory",
       type: "item",
       url: "#",
-      icon: icons.SearchOutlined,
+      icon: icons.searchDirectory,
       breadcrumbs: false,
     },
     {
@@ -42,7 +68,7 @@ const userdashboard = {
       title: "Franchise Listing",
       type: "item",
       url: "#",
-      icon: icons.FileTextOutlined,
+      icon: icons.franchiseList,
       breadcrumbs: false,
     },
     {
@@ -50,7 +76,7 @@ const userdashboard = {
       title: "Sales Lead",
       type: "item",
       url: "#",
-      icon: icons.FilterOutlined,
+      icon: icons.salesLead,
       breadcrumbs: false,
     },
   ],

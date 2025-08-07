@@ -97,6 +97,7 @@ const SignIn = () => {
                 <BsArrowLeft size={20} />
               </p>
               Welcome to Franchise Listings
+              <span></span>
             </h3>
 
             {/* Tabs */}
@@ -163,7 +164,7 @@ const SignIn = () => {
                   className="form-select mb-3"
                 >
                   <option value="">I am</option>
-                  <option value="franchisor">I AM A FRANCHISOR</option>
+                  <option value="franchisor">A FRANCHISOR</option>
                   <option value="franchisee">LOOKING TO BY A FRANCHISE</option>
                 </select>
                 <label>Email</label>

@@ -1,7 +1,8 @@
 // material-ui
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import { PiCrownSimple } from "react-icons/pi";
+import Footer from "../../Footer";
+import Crown from "../../../../assets/images/users/crown.svg";
 
 // project import
 import MainCard from "components/MainCard";
@@ -10,14 +11,15 @@ import MainCard from "components/MainCard";
 
 export default function NavCard() {
   return (
-    <MainCard>
-      <Stack alignItems="center">
+    <MainCard className="border-0 upgrade-account-btn">
+      <Stack alignItems="center" c>
         <a href="#" className="upgrade-link">
           <Button>
-            <PiCrownSimple size={20} /> Upgrade Account{" "}
+            <img src={Crown} alt="Crown" /> Upgrade Account{" "}
           </Button>
         </a>
       </Stack>
+      <Footer />
     </MainCard>
   );
 }
